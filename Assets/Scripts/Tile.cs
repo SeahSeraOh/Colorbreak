@@ -10,6 +10,10 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
+        if (isBlocked)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+        }
         Grid.instance.tiles.Add(this);
         position = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
     }

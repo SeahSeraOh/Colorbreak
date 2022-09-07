@@ -5,44 +5,49 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public Colorbreak.Color color;
-    private Vector2Int position;
+    public MaterialDatabase database;
 
-    MeshRenderer meshRenderer;
+    private Vector2Int position;
+    private MeshRenderer meshRenderer;
+
+    private void Awake()
+    {
+        SetMaterial();
+    }
 
     private void Start()
     {
         position = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
     }
 
-
-    private void Awake()
+    private void SetMaterial()
     {
         meshRenderer = GetComponent<MeshRenderer>();
 
         switch (color)
         {
             case Colorbreak.Color.YELLOW:
-                meshRenderer.material = MaterialDatabase.instance.yellow;
+                meshRenderer.material = database.yellow;
 
                 break;
             case Colorbreak.Color.BLUE:
-                meshRenderer.material = MaterialDatabase.instance.blue;
+                meshRenderer.material = database.blue;
 
                 break;
             case Colorbreak.Color.RED:
-                meshRenderer.material = MaterialDatabase.instance.red;
+                meshRenderer.material = database.red;
 
                 break;
             case Colorbreak.Color.PURPLE:
-                meshRenderer.material = MaterialDatabase.instance.purple;
+                meshRenderer.material = database.purple;
 
                 break;
             case Colorbreak.Color.PINK:
-                meshRenderer.material = MaterialDatabase.instance.pink;
+                meshRenderer.material = database.pink;
 
                 break;
             case Colorbreak.Color.GREEN:
-                meshRenderer.material = MaterialDatabase.instance.green;
+                meshRenderer.material = database.green;
 
                 break;
         }

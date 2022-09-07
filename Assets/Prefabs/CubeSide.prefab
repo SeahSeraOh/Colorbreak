@@ -41,7 +41,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4385641776549190207}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9, y: 0.2, z: 9}
@@ -59,13 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 0
-  textWin: {fileID: 0}
-  yellow: {fileID: 2100000, guid: 678763310ff60fb47b4ba8268fb2cd17, type: 2}
-  blue: {fileID: 2100000, guid: b5237204b27c9ac46a079fd5fa4dcfb2, type: 2}
-  red: {fileID: 2100000, guid: 762fa5bf0a79d3c45b661d9b3e3618cb, type: 2}
-  green: {fileID: 2100000, guid: 81bbeb17377c6964cbd495de593e74cb, type: 2}
-  purple: {fileID: 2100000, guid: 454bf2bafce1daf41a0c6ef95671ea4a, type: 2}
-  pink: {fileID: 2100000, guid: 4547073e87690c8439c3c69fce4755ef, type: 2}
+  database: {fileID: 11400000, guid: 277225b585ebf8846a5b0c4c1c6fd869, type: 2}
+  puzzleSolvedEC: {fileID: 11400000, guid: ebb483211100f9745a5944f607cc7b65, type: 2}
 --- !u!1 &4929515700500178140
 GameObject:
   m_ObjectHideFlags: 0

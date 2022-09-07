@@ -17,6 +17,10 @@ public class Cube : MonoBehaviour
     KeyCode keyLeft = KeyCode.A;
     KeyCode keyBack = KeyCode.S;
     KeyCode keyRight = KeyCode.D;
+    KeyCode altKeyForward = KeyCode.UpArrow;
+    KeyCode altKeyLeft = KeyCode.LeftArrow;
+    KeyCode altKeyBack = KeyCode.DownArrow;
+    KeyCode altKeyRight = KeyCode.RightArrow;
 
     private void Awake()
     {
@@ -56,22 +60,22 @@ public class Cube : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetKeyDown(keyForward) && !blockedForward)
+        if ((Input.GetKeyDown(keyForward) || Input.GetKeyDown(altKeyForward)) && !blockedForward)
         {
             transform.parent.Translate(new Vector3(0, 0, 1));
             transform.Rotate(new Vector3(90, 0, 0), Space.World);
         }
-        else if (Input.GetKeyDown(keyLeft) && !blockedLeft)
+        else if ((Input.GetKeyDown(keyLeft) || Input.GetKeyDown(altKeyLeft)) && !blockedLeft)
         {
             transform.parent.Translate(new Vector3(-1, 0, 0));
             transform.Rotate(new Vector3(0, 0, 90), Space.World);
         }
-        else if (Input.GetKeyDown(keyRight) && !blockedRight)
+        else if ((Input.GetKeyDown(keyRight) || Input.GetKeyDown(altKeyRight)) && !blockedRight)
         {
             transform.parent.Translate(new Vector3(1, 0, 0));
             transform.Rotate(new Vector3(0, 0, -90), Space.World);
         }
-        else if (Input.GetKeyDown(keyBack) && !blockedBack)
+        else if ((Input.GetKeyDown(keyBack) || Input.GetKeyDown(altKeyBack)) && !blockedBack)
         {
             transform.parent.Translate(new Vector3(0, 0, -1));
             transform.Rotate(new Vector3(-90, 0, 0), Space.World);
