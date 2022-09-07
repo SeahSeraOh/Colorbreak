@@ -5,8 +5,15 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
     public Colorbreak.Color color;
+    private Vector2Int position;
 
     MeshRenderer meshRenderer;
+
+    private void Start()
+    {
+        position = new Vector2Int(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.z));
+    }
+
 
     private void Awake()
     {
@@ -16,6 +23,7 @@ public class Wall : MonoBehaviour
         {
             case Colorbreak.Color.YELLOW:
                 meshRenderer.material = MaterialDatabase.instance.yellow;
+
                 break;
             case Colorbreak.Color.BLUE:
                 meshRenderer.material = MaterialDatabase.instance.blue;

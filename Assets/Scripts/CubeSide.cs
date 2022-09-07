@@ -8,9 +8,11 @@ public class CubeSide : MonoBehaviour
     public GameObject textWin;
 
     MeshRenderer meshRenderer;
+    Cube cube;
 
     private void Awake()
     {
+        cube = FindObjectOfType<Cube>();
         meshRenderer = transform.parent.GetComponent<MeshRenderer>();
         
         switch (color)
@@ -43,7 +45,15 @@ public class CubeSide : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        print("collision");
-        textWin.SetActive(true);
+        Wall wall = other.GetComponent<Wall>();
+        if (wall != null)
+        {
+            Colorbreak.Color wallColor = wall.color;
+            if(wallColor == color)
+            {
+                textWin.SetActive(true);
+                cube.canMove = false;
+            }
+        }
     }
 }
