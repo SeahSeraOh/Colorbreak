@@ -9,14 +9,7 @@ public class Grid : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     public Tile GetTile(Vector2Int pos)

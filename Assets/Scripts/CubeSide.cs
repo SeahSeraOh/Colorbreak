@@ -5,39 +5,51 @@ using UnityEngine;
 public class CubeSide : MonoBehaviour
 {
     public Colorbreak.Color color;
-    public GameObject textWin;
+    public MaterialDatabase database;
+    public VoidEventChannelSO puzzleSolvedEC;
 
-    MeshRenderer meshRenderer;
-    Cube cube;
+    private Cube cube;
+    private MeshRenderer meshRenderer;
 
     private void Awake()
     {
         cube = FindObjectOfType<Cube>();
+        SetColor();
+    }
+
+    private void OnValidate()
+    {
+        SetColor();
+    }
+
+    void SetColor()
+    {
         meshRenderer = transform.parent.GetComponent<MeshRenderer>();
-        
+
         switch (color)
         {
             case Colorbreak.Color.YELLOW:
-                meshRenderer.material = MaterialDatabase.instance.yellow;
+                meshRenderer.material = database.yellow;
+
                 break;
             case Colorbreak.Color.BLUE:
-                meshRenderer.material = MaterialDatabase.instance.blue;
+                meshRenderer.material = database.blue;
 
                 break;
             case Colorbreak.Color.RED:
-                meshRenderer.material = MaterialDatabase.instance.red;
+                meshRenderer.material = database.red;
 
                 break;
             case Colorbreak.Color.PURPLE:
-                meshRenderer.material = MaterialDatabase.instance.purple;
+                meshRenderer.material = database.purple;
 
                 break;
             case Colorbreak.Color.PINK:
-                meshRenderer.material = MaterialDatabase.instance.pink;
+                meshRenderer.material = database.pink;
 
                 break;
             case Colorbreak.Color.GREEN:
-                meshRenderer.material = MaterialDatabase.instance.green;
+                meshRenderer.material = database.green;
 
                 break;
         }
@@ -51,7 +63,7 @@ public class CubeSide : MonoBehaviour
             Colorbreak.Color wallColor = wall.color;
             if(wallColor == color)
             {
-                textWin.SetActive(true);
+                puzzleSolvedEC.RaiseEvent();
                 cube.canMove = false;
             }
         }

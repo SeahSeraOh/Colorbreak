@@ -82,6 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8c4c9d9328b824db32f6e52942b7c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove: 1
+  blockedForward: 0
+  blockedBack: 0
+  blockedLeft: 0
+  blockedRight: 0
 --- !u!1001 &36065751643053611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: CubeSide
+      value: CubeSide_2
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
@@ -188,11 +193,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 81bbeb17377c6964cbd495de593e74cb, type: 2}
+      objectReference: {fileID: 2100000, guid: b5237204b27c9ac46a079fd5fa4dcfb2, type: 2}
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: CubeSide (1)
+      value: CubeSide_3
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
@@ -278,11 +283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4547073e87690c8439c3c69fce4755ef, type: 2}
+      objectReference: {fileID: 2100000, guid: b5237204b27c9ac46a079fd5fa4dcfb2, type: 2}
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: CubeSide (2)
+      value: CubeSide_4
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
@@ -368,11 +373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 762fa5bf0a79d3c45b661d9b3e3618cb, type: 2}
+      objectReference: {fileID: 2100000, guid: b5237204b27c9ac46a079fd5fa4dcfb2, type: 2}
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: CubeSide (3)
+      value: CubeSide_5
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
@@ -457,7 +462,7 @@ PrefabInstance:
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: Yellow
+      value: CubeSide_1
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
@@ -533,11 +538,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 454bf2bafce1daf41a0c6ef95671ea4a, type: 2}
+      objectReference: {fileID: 2100000, guid: b5237204b27c9ac46a079fd5fa4dcfb2, type: 2}
     - target: {fileID: 4929515700500178140, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
       propertyPath: m_Name
-      value: CubeSide (4)
+      value: CubeSide_6
       objectReference: {fileID: 0}
     - target: {fileID: 4929515700500178143, guid: 1397c3f7a94be214a855ca704af84521,
         type: 3}
